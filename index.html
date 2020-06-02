@@ -8,6 +8,14 @@
     <title>Calculator</title>
 </head>
 <body>
-    
+    <div id="root">
+        <div class="grid">
+            <input v-model="result" type="text" placeholder="0">
+            <button v-on:click="input(num)" class="cell num" v-for="num in numbers">{{num}}</button>
+            <button v-on:click="input(op)" class="cell op" v-for="op in operations">{{op}}</button>
+            <button @click="reset()" class="cell op">R</button>
+            <button @click="calc()" class="cell op">=</button>
+        </div>
+    </div>
 </body>
 </html>
